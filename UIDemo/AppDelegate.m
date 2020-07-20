@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#if __has_include(<BDWebImage/BDWebImage.h>)
+#import <TTNetworkManager/TTNetworkManager.h>
+#import <TTNetworkManager/TTHTTPBinaryResponseSerializerBase.h>
+#endif
 
 @interface AppDelegate ()
 

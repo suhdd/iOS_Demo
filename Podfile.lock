@@ -1,0 +1,18 @@
+PODS:
+  - SDWebImage (5.3.1):
+    - SDWebImage/Core (= 5.3.1)
+  - SDWebImage/Core (5.3.1)
+
+DEPENDENCIES:
+  - SDWebImage
+
+SPEC REPOS:
+  "git@code.byted.org:iOS_Library/publicthird_source_repo.git":
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  SDWebImage: 152287ee16422f8444da485f5635f32f45c5764e
+
+PODFILE CHECKSUM: d64e3a9639471f3756107f0966aa12c645db0b4a
+
+COCOAPODS: 1.9.3
