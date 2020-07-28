@@ -9,10 +9,14 @@
 #import "ViewController.h"
 #import "BDCell.h"
 #import "CellDataModel.h"
+
 #define CELLID @"lineCell"
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) UIButton * reFreshButton;
 @property (nonatomic, strong) UITableView * tableView;
 //@property (nonatomic, strong) NSDictionary * jsonDic;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -27,26 +31,58 @@
     [super viewDidLoad];
     
     self.title = @"UI Demo";
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    CGRect buttonBounds = CGRectMake (0, SCREENHEIGHT-75, SCREENWIDTH, 50);
+    CGRect tableViewBounds = CGRectMake(0, 20, SCREENWIDTH, SCREENHEIGHT-100);
+    self.reFreshButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.reFreshButton.frame = buttonBounds;
+    [self.reFreshButton setTitle:@"刷新页面" forState:UIControlStateNormal];
+    [self.reFreshButton addTarget:self action:@selector(reloadInfo) forControlEvents:UIControlEventTouchUpInside];
+    self.tableView = [[UITableView alloc] initWithFrame:tableViewBounds style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:BDCell.class forCellReuseIdentifier:CELLID];
 //    [self.tableView registerClass:UITableViewCell.class forHeaderFooterViewReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
+    [self.view addSubview:self.reFreshButton];
     [self.view addSubview:self.tableView];
-    [self createData];
-
+    [self reloadInfo];
 }
 
-- (void) createData
+- (void) reloadInfo
 {
     // loading session file
-    NSString * filePath = [[[NSBundle mainBundle] pathForResource:@"Data" ofType:@"bundle"] stringByAppendingString:@"/sessions.json"];
-    NSError * fileError;
-    NSString * fileData = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&fileError];
-    NSData *jsonData = [fileData dataUsingEncoding:NSUTF8StringEncoding];
-    NSMutableArray * jsonDataArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&fileError];
-    NSLog(@"loading file completed!");
-    
+    //    NSString * filePath = [[[NSBundle mainBundle] pathForResource:@"Data" ofType:@"bundle"] stringByAppendingString:@"/sessions.json"];
+    //    NSError * fileError;
+    //    NSString * fileData = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&fileError];
+    //    NSData *jsonData = [fileData dataUsingEncoding:NSUTF8StringEncoding];
+    //    NSMutableArray * jsonDataArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&fileError];
+    NSURLSession *session = [NSURLSession sharedSession];
+            // 发起任务
+            NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"http://www.test.com/json"]
+                                                     completionHandler:
+                 ^(NSData *data, NSURLResponse *response, NSError *error) {
+    //            NSLog([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+                    if (!error && data) {
+                        // 反序列化
+                        NSMutableArray * jsonDataArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            // 更新UI;
+                            NSLog(@"获取json成功");
+                            [self createData:jsonDataArray];
+                            [self.tableView reloadData];
+                        });
+                    }
+                    else
+                    {
+                        NSLog(@"获取json错误");
+                    }
+                }];
+                // 所有任务默认都是挂起的，需要继续才能执行
+            [task resume];
+            NSLog(@"loading file completed!");
+}
+
+- (void) createData:(NSMutableArray *) jsonDataArray
+{
     // 数据源数组
     _dataArray = [NSMutableArray array];
     

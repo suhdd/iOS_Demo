@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07EEAC5224C1992900315F7D /* Data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07EEAC5124C1992900315F7D /* Data.bundle */; };
+		07EEAC5524C1A31300315F7D /* BDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEAC5424C1A31300315F7D /* BDCell.m */; };
+		07EEAC5824C1ABF700315F7D /* CellDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EEAC5724C1ABF700315F7D /* CellDataModel.m */; };
 		07F00AD224C15C9500EB8C74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F00AD124C15C9500EB8C74 /* AppDelegate.m */; };
 		07F00AD524C15C9500EB8C74 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F00AD424C15C9500EB8C74 /* SceneDelegate.m */; };
 		07F00AD824C15C9500EB8C74 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F00AD724C15C9500EB8C74 /* ViewController.m */; };
@@ -14,9 +17,15 @@
 		07F00ADD24C15C9700EB8C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F00ADC24C15C9700EB8C74 /* Assets.xcassets */; };
 		07F00AE024C15C9700EB8C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F00ADE24C15C9700EB8C74 /* LaunchScreen.storyboard */; };
 		07F00AE324C15C9700EB8C74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F00AE224C15C9700EB8C74 /* main.m */; };
+		815B17DF3CEBB95CDFB6818F /* libPods-UIDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF034C1A6B26DA28AB94B9C /* libPods-UIDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07EEAC5124C1992900315F7D /* Data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Data.bundle; sourceTree = "<group>"; };
+		07EEAC5324C1A2FF00315F7D /* BDCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDCell.h; sourceTree = "<group>"; };
+		07EEAC5424C1A31300315F7D /* BDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDCell.m; sourceTree = "<group>"; };
+		07EEAC5624C1ABF700315F7D /* CellDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellDataModel.h; sourceTree = "<group>"; };
+		07EEAC5724C1ABF700315F7D /* CellDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellDataModel.m; sourceTree = "<group>"; };
 		07F00ACD24C15C9500EB8C74 /* UIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F00AD024C15C9500EB8C74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07F00AD124C15C9500EB8C74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +38,9 @@
 		07F00ADF24C15C9700EB8C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07F00AE124C15C9700EB8C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F00AE224C15C9700EB8C74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A4C4C803FFB685E7C8646D6 /* Pods-UIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIDemo.debug.xcconfig"; path = "Target Support Files/Pods-UIDemo/Pods-UIDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8401ACAC0745F38C20B6D339 /* Pods-UIDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIDemo.release.xcconfig"; path = "Target Support Files/Pods-UIDemo/Pods-UIDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9FF034C1A6B26DA28AB94B9C /* libPods-UIDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815B17DF3CEBB95CDFB6818F /* libPods-UIDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +60,8 @@
 			children = (
 				07F00ACF24C15C9500EB8C74 /* UIDemo */,
 				07F00ACE24C15C9500EB8C74 /* Products */,
+				8F3836293C313E6274B38218 /* Pods */,
+				A5A3936C52F2E661CC811E47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				07F00AD024C15C9500EB8C74 /* AppDelegate.h */,
+				07EEAC5124C1992900315F7D /* Data.bundle */,
 				07F00AD124C15C9500EB8C74 /* AppDelegate.m */,
 				07F00AD324C15C9500EB8C74 /* SceneDelegate.h */,
 				07F00AD424C15C9500EB8C74 /* SceneDelegate.m */,
@@ -72,8 +88,29 @@
 				07F00ADE24C15C9700EB8C74 /* LaunchScreen.storyboard */,
 				07F00AE124C15C9700EB8C74 /* Info.plist */,
 				07F00AE224C15C9700EB8C74 /* main.m */,
+				07EEAC5324C1A2FF00315F7D /* BDCell.h */,
+				07EEAC5424C1A31300315F7D /* BDCell.m */,
+				07EEAC5624C1ABF700315F7D /* CellDataModel.h */,
+				07EEAC5724C1ABF700315F7D /* CellDataModel.m */,
 			);
 			path = UIDemo;
+			sourceTree = "<group>";
+		};
+		8F3836293C313E6274B38218 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A4C4C803FFB685E7C8646D6 /* Pods-UIDemo.debug.xcconfig */,
+				8401ACAC0745F38C20B6D339 /* Pods-UIDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5A3936C52F2E661CC811E47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FF034C1A6B26DA28AB94B9C /* libPods-UIDemo.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07F00AE624C15C9700EB8C74 /* Build configuration list for PBXNativeTarget "UIDemo" */;
 			buildPhases = (
+				15B4554DEECCDBCA37BDB13C /* [CP] Check Pods Manifest.lock */,
 				07F00AC924C15C9500EB8C74 /* Sources */,
 				07F00ACA24C15C9500EB8C74 /* Frameworks */,
 				07F00ACB24C15C9500EB8C74 /* Resources */,
+				2F2EA10B518E5CDA43354851 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +173,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F00AE024C15C9700EB8C74 /* LaunchScreen.storyboard in Resources */,
+				07EEAC5224C1992900315F7D /* Data.bundle in Resources */,
 				07F00ADD24C15C9700EB8C74 /* Assets.xcassets in Resources */,
 				07F00ADB24C15C9500EB8C74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15B4554DEECCDBCA37BDB13C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F2EA10B518E5CDA43354851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UIDemo/Pods-UIDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UIDemo/Pods-UIDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UIDemo/Pods-UIDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07F00AC924C15C9500EB8C74 /* Sources */ = {
@@ -149,7 +231,9 @@
 				07F00AD824C15C9500EB8C74 /* ViewController.m in Sources */,
 				07F00AD224C15C9500EB8C74 /* AppDelegate.m in Sources */,
 				07F00AE324C15C9700EB8C74 /* main.m in Sources */,
+				07EEAC5524C1A31300315F7D /* BDCell.m in Sources */,
 				07F00AD524C15C9500EB8C74 /* SceneDelegate.m in Sources */,
+				07EEAC5824C1ABF700315F7D /* CellDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +371,12 @@
 		};
 		07F00AE724C15C9700EB8C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4C4C803FFB685E7C8646D6 /* Pods-UIDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,15 +384,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BD.UIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		07F00AE824C15C9700EB8C74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8401ACAC0745F38C20B6D339 /* Pods-UIDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BD.UIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
